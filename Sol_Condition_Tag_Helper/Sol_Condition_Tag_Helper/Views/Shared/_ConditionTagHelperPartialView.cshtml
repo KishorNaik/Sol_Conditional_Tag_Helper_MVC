@@ -1,0 +1,18 @@
+﻿
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Sol_Condition_Tag_Helper.TagHelpers.ConditionTagHelpersModel
+
+@if (Model.MarkCondition == true)
+{
+    <div id="divIfPart">
+        @Model.If
+    </div>
+}
+else
+{
+    <div id="divElsePart">
+        @Model.Else
+    </div>
+}

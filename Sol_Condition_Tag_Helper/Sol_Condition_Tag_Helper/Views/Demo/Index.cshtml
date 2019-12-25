@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+@{
+
+    int value = 13;
+}
+
+@{
+   
+Func<dynamic, Object> IfPart =@<div>
+
+    <h1 style="color:green">@item</h1>
+
+</div>;
+
+Func<dynamic, Object> ElsePart =@<div>
+    <h1 style="color:red">@item</h1>
+</div>;
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+
+            <div-condition mark-condition="@(value % 2==0)" 
+                           if-html="@(IfPart("The given number is even"))" 
+                           else-html="@ElsePart("The given number is odd")">
+
+            </div-condition>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
